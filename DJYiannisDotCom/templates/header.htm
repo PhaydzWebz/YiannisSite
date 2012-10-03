@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <title>My Cool Web Site</title>
+    <link href="style/DJYi.css" rel="stylesheet" type="text/css" />
+    <link href="style/gooeymenu.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>    
+    <script type="text/javascript" src="includes/gooeymenu.js"></script>
+    <script type="text/JavaScript">
+        function setActive() {
+            aObj = document.getElementById('nav').getElementsByTagName('a');
+            for(i=0;i<aObj.length;i++) {
+                if(document.location.href.indexOf(aObj[i].href)>=0) {
+                    aObj[i].className='selected';
+                }
+            }
+        }
+    </script> 
+
+</head>
+<body>
+    <div id="container">
+        <div id="appholder" style="margin-top: 0px; margin-right: auto; margin-bottom: auto; margin-left: auto;">
+        <div id="mainmenu">
+            <ul id="yiannismenu" class="underlinemenu">
+                <li id ="index"><a href="?action=index">Home</a></li>
+                <li id ="discog"><a href="?action=discog">Discography</a></li>
+                <li><a href="http://www.dynamicdrive.com/forums/">Forums</a></li>
+                <li><a href="http://tools.dynamicdrive.com">Tools</a></li>
+                <li><a href="http://www.javascriptkit.com/">JavaScript</a></li>
+                <li><a href="http://www.cssdrive.com">CSS Gallery</a></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            document.setactive();
+        </script>
+        <script type="text/JavaScript">
+            gooeymenu.setup({id:'yiannismenu', fxtime:250})
+        </script>
+        <div id="content">

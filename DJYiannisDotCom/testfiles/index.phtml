@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<?php
+include "http://www.creeperstat.us/testyiannis/includes/menu.class.php";
+include "http://www.creeperstat.us/testyiannis/includes/tidy_menu.class.php";
+include "http://www.creeperstat.us/testyiannis/includes/header.html";   
+
+// Set the default name 
+$action = 'home'; 
+// Specify some disallowed paths 
+$disallowed_paths = array('header', 'footer'); 
+if (!empty($_GET['action'])) { 
+    $tmp_action = basename($_GET['action']); 
+    // If it's not a disallowed path, and if the file exists, update $action 
+}
+    if (!in_array($tmp_action, $disallowed_paths) && file_exists("http://www.creeperstat.us/testyiannis/includes/{$tmp_action}.html")){
+        $action = $tmp_action;
+        include("http://www.creeperstat.us/testyiannis/includes/$action.html");
+}
+// Include $action 
+include("http://www.creeperstat.us/testyiannis/includes/$action.html"); 
+
+include("http://www.creeperstat.us/testyiannis/includes/footer.html");
+?>
+</html>

@@ -1,0 +1,20 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <title>My Cool Web Site</title>
+    <link href="https://netforum.avectra.com/eweb/style/ModernRed.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="mainmenu">
+        <?
+        $menu = menu::factory()  
+            ->add('About Us', '#', menu::factory()  
+                ->add('Who We Are', '#')  
+                ->add('What We Do', '#')  
+                ->add('Other Things', '#'))  
+            ->add('Random', '#', menu::factory()  
+                ->add('Link One', '#')  
+                ->add('Link Two', '#', menu::factory()  
+                    ->add('Level Three', '#')));
+        ?>
+    </div>
+    <div id="content">

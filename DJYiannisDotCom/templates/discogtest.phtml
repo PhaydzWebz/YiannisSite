@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1;" />
+    <title>My Cool Web Site</title>
+    <link href="http://www.creeperstat.us/testyiannis/style/DJYi.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        #appholder
+        {
+            margin-top: 0px; 
+            margin-right: auto; 
+            margin-bottom: auto; 
+            margin-left: auto;
+        }
+    </style>
+    <?php 
+        public function runquery()
+        {
+            $db_host = 'creeperstatus.ipagemysql.com';
+            $db_user = 'yiannissql';
+            $db_pwd = 'djysqldis1!#';
+            $database = 'yiannissql';
+            $table = 'DISCOG';
+            $columnlist = "`TRACK` , `ARTIST` , `LABEL`";
+            $whereclause = "1";
+            $limiterbegin = 0;
+            $limiterend = 30;
+            if (!mysql_connect($db_host, $db_user, $db_pwd))
+                    die("Can't connect to database");
+
+            if (!mysql_select_db($database))
+                    die("Can't select database");
+
+            // sending query
+            $result = mysql_query("SELECT {$columnlist} FROM {$table} WHERE {$whereclause}");
+            if (!$result) {
+                    die("Query to show fields from table failed");
+            }
+
+            $fields_num = mysql_num_fields($result);
+
+            echo "<h1>Table: {$table}</h1>";
+            echo "<table border='1'><tr>";
+            /* printing table headers*/
+            for($i=0; $i<$fields_num; $i++)
+            {
+                    $field = mysql_fetch_field($result);
+                    echo "<td>{$field->name}</td>";
+            }
+            echo "</tr>\n";
+            // printing table rows
+            while($row = mysql_fetch_row($result))
+            {
+                    echo "<tr>";
+
+                    // $row is array... foreach( .. ) puts every element
+                    // of $row to $cell variable
+                    foreach($row as $cell)
+                            echo "<td>$cell</td>";
+
+                    echo "</tr>\n";
+            }
+            mysql_free_result($result);
+        }
+        ?>
+</head>
+<body>
+    <div id="container">
+        <div id="appholder">
+            <div id="content">
+                <? runquery(); ?>
+            </div>
+        </div>
+    </div>
+</body>
+</html>	

@@ -1,0 +1,82 @@
+/* 
+    Document   : DYDC
+    Created on : Sep 25, 2012, 10:39:20 PM
+    Author     : cmossman
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+#container{
+    width: 100%;
+    background-image: url("images/bg2.jpg");
+}
+#appholder{
+border: 1px solid #696;
+padding: 60px 0;
+text-align: center; 
+width: 200px;
+-webkit-border-radius: 24px;
+-moz-border-radius: 24px;
+border-radius: 24px;
+-webkit-box-shadow: #666 0px 2px 3px;
+-moz-box-shadow: #666 0px 2px 3px;
+box-shadow: #666 0px 2px 3px;
+background: #EEFF99;
+background: -webkit-gradient(linear, 0 0, 0 bottom, from(#EEFF99), to(#66EE33));
+background: -webkit-linear-gradient(#EEFF99, #66EE33);
+background: -moz-linear-gradient(#EEFF99, #66EE33);
+background: -ms-linear-gradient(#EEFF99, #66EE33);
+background: -o-linear-gradient(#EEFF99, #66EE33);
+background: linear-gradient(#EEFF99, #66EE33);
+-pie-background: linear-gradient(#EEFF99, #66EE33);
+behavior: url(includes/PIE.php);
+}
+#header{
+    width: 700px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #0039B8;
+    background-image: url("images/Yiannis.jpg");
+    color: #aaff00;
+}
+#content{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left-width: 1px;
+    border-left-color: #000000;
+    border-left-style: dotted;
+    border-right-width: 1px;
+    border-right-color: #000000;
+    border-right-style: dotted;
+    border-top-width: 2px;
+    border-top-color: #000000;
+    border-top-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #000000;
+    border-bottom-style: solid;
+}
+#footer{
+    width: 700px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content h1{
+    font-size: x-large;
+    font-family: fantasy;
+}
+#content p{
+    font-size: 1;
+    font-family: serif;
+    font-weight: bold
+}

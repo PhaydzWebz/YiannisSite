@@ -1,0 +1,87 @@
+/* 
+    Document   : DYDC
+    Created on : Sep 25, 2012, 10:39:20 PM
+    Author     : cmossman
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+#container{
+    width: 100%;
+    background-image: url("http://www.creeperstat.us/testyiannis/images/bg2.jpg");
+	background-repeat: norepeat;
+	background-attachment: scroll;
+}
+#appholder{
+margin: 0px auto auto auto;
+border: 1px solid #696;
+padding: 60px 0;
+text-align: center; 
+width: 850px;
+-webkit-border-radius: 24px;
+-moz-border-radius: 24px;
+border-radius: 24px;
+-webkit-box-shadow: #666 0px 2px 3px;
+-moz-box-shadow: #666 0px 2px 3px;
+box-shadow: #666 0px 2px 3px;
+background: #38B6FF;
+background: -webkit-gradient(linear, 0 0, 0 bottom, from(#D6F0FF), to(#38B6FF));
+background: -webkit-linear-gradient(#D6F0FF, #38B6FF);
+background: -moz-linear-gradient(#D6F0FF, #38B6FF);
+background: -ms-linear-gradient(#D6F0FF, #38B6FF);
+background: -o-linear-gradient(#D6F0FF, #38B6FF);
+background: linear-gradient(#D6F0FF, #38B6FF);
+-pie-background: linear-gradient(#D6F0FF, #38B6FF);
+behavior: url(includes/PIE.php);
+}
+#header{
+    width: 800px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #0039B8;
+    background-image: url("http://www.creeperstat.us/testyiannis/images/Yiannis.jpg");
+    color: #aaff00;
+}
+#content{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left-width: 1px;
+    border-left-color: #000000;
+    border-left-style: dotted;
+    border-right-width: 1px;
+    border-right-color: #000000;
+    border-right-style: dotted;
+    border-top-width: 2px;
+    border-top-color: #000000;
+    border-top-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #000000;
+    border-bottom-style: solid;
+	background-color: White;
+	background: #FFFFFF;
+}
+#footer{
+    width: 800px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content h1{
+    font-size: x-large;
+    font-family: fantasy;
+}
+#content p{
+    font-size: 1;
+    font-family: serif;
+    font-weight: bold
+}

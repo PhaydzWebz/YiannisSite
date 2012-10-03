@@ -1,0 +1,21 @@
+DBName:  yiannisdisc
+Username:  yiannissql
+Password: djysqldis1!#
+
+
+ <?php 
+$link = mysql_connect('creeperstatus.ipagemysql.com', 'yiannissql', 'djysqldis1!#'); 
+if (!$link) { 
+    die('Could not connect: ' . mysql_error()); 
+} 
+echo 'Connected successfully'; 
+mysql_select_db(yiannisdisc); 
+?> 
+
+$sql = 'SELECT `TRACK` , `ARTIST` , `LABEL` FROM `DISCOG` WHERE 1 LIMIT 0, 30 ';
+
+$db_host,'localhost'
+$db_user = 'root';
+$db_pwd = 'lptm42b';
+$database = 'sphinx';
+$table = 'spheres';
